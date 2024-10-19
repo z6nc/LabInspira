@@ -3,19 +3,18 @@ import { Proyectos } from "../../scripts/proyect"
 ---
 <!-- Hacer el map de array de objestos de los proyectos  -->
  
-<section class="grid grid-cols-1 lg:grid-cols-3   gap-9  lg:gap-3   mt-4">
+<section class="grid grid-cols-1 lg:grid-cols-3   gap-9  lg:gap-12   mt-4  mx-3 lg:mx-0">
     {
         Proyectos.map((proyecto) => (
-            <div class="Contenedor-proyectos  flex flex-col gap-4  rounded-md  items-center justify-between  filter grayscale-[80%] hover:grayscale-0 transition duration-300">
+            <div class="Contenedor-proyectos   flex flex-col gap-4  rounded-md  items-center justify-between  filter grayscale-[40%] hover:grayscale-0 transition duration-300">
                 <div class="flex flex-col gap-3  items-center">
-                    <div class="overflow-hidden h-72 w-72 rounded-lg">
-                    <img class="rounded-lg w-full object-contain object-center h-full transition-all duration-200 hover:scale-110" loading="lazy" src={proyecto.imagen} alt="">
-                </div>
-                <div class="flex  flex-col gap-3 justify-center items-center text-center">
-                    <h4 class="text-2xl lg:text-2xl  font-principal">{proyecto.nombre}</h4>
-                    <p class="text-gray-100">{proyecto.descripcion}</p>
-                    
-                </div>
+                    <div class="overflow-hidden  h-48 lg:h-52 w-full rounded-xl">
+                    <img class="rounded-lg w-full object-cover object-center h-full transition-all duration-200 hover:scale-110" loading="lazy" src={proyecto.imagen} alt="">
+                     </div>
+                   <div class="flex  flex-col gap-3 justify-center items-center text-center">
+                       <h4 class="text-2xl lg:text-3xl  font-principal">{proyecto.nombre}</h4>
+                       <p class="text-gray-100">{proyecto.descripcion}</p>
+                    </div>
                 </div>
                 <a class="bg-primario px-12 py-2 rounded-md font-principal" href={proyecto.link}>Acceder </a>
             </div>
