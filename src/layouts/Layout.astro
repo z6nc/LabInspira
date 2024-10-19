@@ -1,0 +1,44 @@
+---
+interface Props {
+	title: string;
+}
+
+const { title } = Astro.props;
+import Navbar from '../components/Index/navbar.astro';
+import MobilNavbar from '../components/Index/mobilNavbar.astro';
+---
+
+<!doctype html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta name="description" content="Astro description" />
+		<meta name="viewport" content="width=device-width" />
+		<!-- <link rel="icon" type="image/svg+xml" href="/favicon.svg" /> -->
+		<link href="https://fonts.googleapis.com/css2?family=Luckiest+Guy&display=swap" rel="stylesheet">
+
+
+		<meta name="generator" content={Astro.generator} />
+		<title>LABORATORIO </title>
+	</head>
+	<body  class="  lg:max-w-7xl mx-auto my-3 relative">
+		<header class="flex flex-col ">
+			<Navbar />
+		   
+		</header>
+		<slot />
+   <footer class="fixed  lg:hidden border-t-[1px] border-gray-400  w-full h-auto  bottom-0 left-0 py-3  bg-[#0a0b115d] backdrop-blur-sm font-black ">
+	<MobilNavbar />
+   </footer>
+	</body> 
+</html>
+<style is:global>
+body{
+  background-color: #0c0f26;
+  color: white;
+  font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+	
+
+</style>

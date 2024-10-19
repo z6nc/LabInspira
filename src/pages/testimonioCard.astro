@@ -1,0 +1,60 @@
+---
+import Layout from "../layouts/Layout.astro"
+import SectionCard1 from "../components/ProyectCard/SectionCard1.astro";
+import SectionCard2 from "../components/ProyectCard/sectionCard2.astro";
+import SectionCard3 from "../components/ProyectCard/sectionCard3.astro";
+import SectionCard4 from "../components/ProyectCard/sectionCard4.astro";
+import Formulario from "../components/ProyectCard/formularioCard.astro";
+---
+
+<Layout title="Welcome to Astro." >
+  
+	<main class="mt-14 flex  flex-col gap-14 mb-8">
+         <Formulario />
+       <section class="container-testimony-card flex  flex-col gap-9 mx-5 lg:mx-0 " >
+        <div class="container-card1">
+        <SectionCard1 />
+          
+        </div>
+        <div class="container-card2">
+        <SectionCard2 />
+        </div>
+        <div class="container-card3 ">
+          <SectionCard3 />
+        </div>
+        <div class="container-card4 ">
+          <SectionCard4 />
+        </div>
+       
+       </section>
+    </main>
+</Layout>
+
+<script src="/src/scripts/testimonyCard.js" client:load></script>
+
+<style>
+
+    @media screen and (min-width: 740px) {
+      .container-testimony-card {
+    display: grid; /* Importante: activar el grid */
+    grid-template-areas: 
+      "card1 card2 "
+      "card3 card3"
+      "card4 card4";
+    gap: 24px; /* Espacio entre elementos */
+  }
+  .container-card1  {
+    grid-area: card1;
+  }
+  .container-card2  {
+    grid-area: card2;
+  }
+  .container-card3{
+    grid-area: card3;
+  }
+  .container-card4 {
+    grid-area: card4;
+  }
+}
+
+</style>

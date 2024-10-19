@@ -1,0 +1,20 @@
+---
+import Layout from '../layouts/Layout.astro';
+import Navbar from '../components/Index/navbar.astro';
+import Buscador from '../components/main/buscador.astro';
+import Proyecto from '../components/main/proyecto.astro'
+---
+
+<Layout title="Welcome to Astro.">
+    <header class="flex flex-col ">
+       <div class="w-full  flex justify-center items-center my-4">
+		<Buscador />
+	   </div>
+	</header>
+	 <main>
+		<Proyecto />
+	 </main>
+		
+</Layout>
+
+
