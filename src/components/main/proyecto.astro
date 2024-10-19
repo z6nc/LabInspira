@@ -12,7 +12,12 @@ import { Proyectos } from "../../scripts/proyect"
                     <img class="rounded-lg w-full object-cover object-center h-full transition-all duration-200 hover:scale-110" loading="lazy" src={proyecto.imagen} alt="">
                      </div>
                    <div class="flex  flex-col gap-3 justify-center items-center text-center">
-                       <h4 class="text-2xl lg:text-3xl  font-principal">{proyecto.nombre}</h4>
+                    <div class="flex gap-2 text-center">
+                        <h4 class="text-2xl lg:text-3xl  font-principal">{proyecto.nombre}</h4>
+                        <div class="text-[#6AFF62]" set:html={proyecto.svg}></div>
+                        <h4 class="text-2xl lg:text-3xl  font-principal">{proyecto.secondNombre}</h4>                       
+                    </div>
+                      
                        <p class="text-gray-100">{proyecto.descripcion}</p>
                     </div>
                 </div>
