@@ -13,6 +13,11 @@ export default {
 		   },
 		   fontFamily: {
 			'principal': ['Luckiest Guy', 'cursive'],
+			'secundaria': ['Comic Neue', 'cursive'],
+		   },
+		   borderWidth: {
+			'1': '1px',
+			'3': '3px',
 		   },
 		
 	},

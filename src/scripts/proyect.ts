@@ -25,24 +25,27 @@ export const Proyectos = [
         id: 3,
         nombre: 'Black',
         secondNombre: 'jack',
-        descripcion: 'Escribe un comentario y genera tarjetas de testimonios personalizadas',
+        descripcion: 'Juega al blackjack y diviértete con este emocionante juego de cartas.',
         imagen: 'https://tse4.mm.bing.net/th?id=OIG1.KDzG4y3OMGK0H8b03VCG&pid=ImgGn',
         link: '/',
-        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">'
-       + '<path d="M16 2a14 14 0 1 0 0 28 14 14 0 0 0 0-28zm1 22h-2v-2h2v2zm1.5-7c-.6 0-1 .4-1 1v2h-3v-2c0-1.4 1-2.5 2.2-2.9.8-.2 1.3-.8 1.3-1.5 0-.9-.8-1.6-1.8-1.6-1 0-1.8.7-1.8 1.6H12c0-1.9 1.7-3.4 3.8-3.4 2 0 3.6 1.5 3.6 3.4 0 1.6-1.1 2.9-2.5 3.3z"/>'
-       + '</svg>',
+        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">'
+           + '<path d="M2 2h20v20H2V2zm18 18V4H4v16h16zm-8-5v-1.5h1.5V13H14v-1.5H12.5V10H14V8.5h-4V10h1.5V11H10v1.5h1.5V14H10v1.5h4z"/>'
+           + '</svg>',
     },
+   
     {
         id: 4,
-        nombre: 'Próximo',
-        secondNombre: 'Proyecto',
-        descripcion: 'Escribe un comentario y genera tarjetas de testimonios personalizadas',
-        imagen: 'https://tse1.mm.bing.net/th?id=OIG4.vMVvf1S.2VUS7aZWheQC&pid=ImgGn',
-        link: '/',
-        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 32 32">'
-       + '<path d="M16 2a14 14 0 1 0 0 28 14 14 0 0 0 0-28zm1 22h-2v-2h2v2zm1.5-7c-.6 0-1 .4-1 1v2h-3v-2c0-1.4 1-2.5 2.2-2.9.8-.2 1.3-.8 1.3-1.5 0-.9-.8-1.6-1.8-1.6-1 0-1.8.7-1.8 1.6H12c0-1.9 1.7-3.4 3.8-3.4 2 0 3.6 1.5 3.6 3.4 0 1.6-1.1 2.9-2.5 3.3z"/>'
-       + '</svg>',
+        nombre: 'Calcu',
+        secondNombre: 'Propina',
+        descripcion: 'Calcula la propina que debes dejar al mesero en un restaurante.',
+        imagen: 'https://tse1.mm.bing.net/th?id=OIG1.rqjM9s4BrtqhIrKxsDSO&pid=ImgGn',
+        link: '/CalculadoraPropina',
+        svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">'
+        + '<path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 3h8v2H8v-2zm0 3h5v2H8v-2z"/>'
+        + '</svg>',
     },
     
-
+    
+    
+    
 ]

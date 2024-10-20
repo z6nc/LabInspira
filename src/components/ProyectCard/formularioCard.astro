@@ -1,10 +1,10 @@
 ---
-const globalLabel = "text-[#3557ee] font-bold";
+const globalLabel = "text-[#3557ee] font-bold text-lg";
 const globalInput = "text-black p-3 rounded-md text-sm  my-2  border-[1px] border-gray-300 placeholder:text-gray-300  placeholder:font-black";
 ---
 
 <form action="" id="form" class="bg-white rounded-3xl  text-black flex flex-col p-7 lg:max-w-2xl lg:mx-auto lg:h-full justify-around  ">
-    <h1 class="text-center text-2xl font-principal  lg:text-3xl uppercase mb-4 text-[#3054d3] ">Testimonio Card</h1>
+    <h1 class="text-center text-4xl font-principal   uppercase mb-4 text-[#3054d3] ">Testimonio Card</h1>
      <label for="imagen" class={globalLabel}>Foto:</label>
     <input type="url" class={`${globalInput} imagenes`} name="imagen" id="imagen"  placeholder="Ingrese Url Imagen"  required/>
 
@@ -20,7 +20,7 @@ const globalInput = "text-black p-3 rounded-md text-sm  my-2  border-[1px] borde
     <label for="calificacion" class={globalLabel}>Calificación (1-10):</label>
     <input type="number" id="calificacion"  class={`${globalInput} calificacions`} name="calificacion" min="1" max="10" step="1" />
   
-   <button class="showButton  bg-[#001975] py-2 text-white rounded-md font-principal">Enviar</button>
+   <button class="showButton  bg-[#0c3ef5fb] hover:bg-[#2450f0fb]  py-2 text-white rounded-md font-principal">Enviar</button>
 
 </form>
 
