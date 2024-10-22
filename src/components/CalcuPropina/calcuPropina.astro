@@ -1,9 +1,12 @@
 ---
+import ResultadoCalcu from "./ResultadoCalcu.astro";
+
+
 const ulStyle ="flex  justify-between px-2";
 ---
 
 
-<section class="flex flex-col w-full   ">
+<section class="flex  flex-col lg:flex-row  lg:justify-evenly  w-full  gap-4 items-center  ">
     <form class="h-auto max-w-96 bg-[#fff9ef] text-gray-800 px-6 py-3 flex flex-col mx-auto lg:mx-0">
         <h3 class="text-center font-principal text-xl border-b-2 border-black">El Crustáceo Cascarudo</h3>
         <div class="font-medium border-dashed border-b-1 border-black py-3">
@@ -59,11 +62,13 @@ const ulStyle ="flex  justify-between px-2";
             </div>
             
         </div>
-        <button class="text-center bg-blue-300 hover:bg-[#69aaf5] py-2 font-principal rounded-lg" type="submit">Calcular Propina</button>
+        <button class="text-center bg-[#FF9A00] hover:bg-[#007ACC] py-2 font-principal rounded-lg" type="submit">Calcular Propina</button>
+
         <p class="text-center italic py-3 ">¡Gracias por comer en el <span class="font-principal text-sm">El Crustáceo Cascarudo !</span> </p>
     </form>
+    
+    <ResultadoCalcu />
 
-
-
+   
 </section>
 

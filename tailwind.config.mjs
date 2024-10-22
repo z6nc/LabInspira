@@ -4,11 +4,14 @@ export default {
 	theme: {
 		extend: {
 			backgroundColor: {
-				primario :"#0aa402"
-				
+				primario :"#0aa402",
+				theme: {
+					'black-t-50': 'rgba(0, 0, 0, 0.459)',
+				},
 			},
 			colors: {
-				primario: "#0aa402"
+				primario: "#0aa402",
+				secundario: "#6AFF62",
 			
 		   },
 		   fontFamily: {
