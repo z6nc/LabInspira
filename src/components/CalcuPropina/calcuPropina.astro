@@ -2,7 +2,7 @@
 import ResultadoCalcu from "./ResultadoCalcu.astro";
 
 
-const ulStyle ="flex  justify-between px-2";
+const ulStyle ="flex  justify-between px-2 items-center";
 ---
 
 
@@ -20,8 +20,8 @@ const ulStyle ="flex  justify-between px-2";
         </div>
         <div class="font-medium border-dashed border-b-1 border-black pb-4">
             <div class="flex justify-between  py-2  font-principal">
-                <p > Consumido</p>
-                <p >Precio</p>
+                <p>Platos marinos</p>
+                <p>Precio</p>
             </div>
          
 
@@ -49,7 +49,7 @@ const ulStyle ="flex  justify-between px-2";
         <div class="flex flex-col py-3 gap-2">
             <div class={ulStyle}>
                 <label for="total" >Atencion de Calamardo :</label>
-               <select class="font-principal text-sm -tracking-tighter" name="" id="">
+               <select class="font-principal text-sm -tracking-tighter pl-3 py-2 border-1 border-black rounded-md" name="" id="">
                 <option value="" disabled selected   >Calificacion</option>
                 <option value="buena">¡Espectacular!</option>
                 <option value="mala">Terrible</option>
@@ -58,11 +58,11 @@ const ulStyle ="flex  justify-between px-2";
               
             <div class={ulStyle}>
                 <label for="">Total a pagar S/ :</label>
-                <input class="font-principal text-sm -tracking-tighter pl-3 "  type="number" name="total" id="total" placeholder="Ingrese un monto" required>
+                <input class="font-principal text-sm -tracking-tighter pl-3 py-2 border-1 border-black rounded-md"  type="number" name="total" id="total" placeholder="Ingrese un monto" required>
             </div>
             
         </div>
-        <button class="text-center bg-[#FF9A00] hover:bg-[#007ACC] py-2 font-principal rounded-lg" type="submit">Calcular Propina</button>
+        <button class="text-center bg-[#ff9900c2] py-2 font-principal rounded-lg hover:scale-105 transition-all duration-100 ease-in " type="submit">Calcular Propina</button>
 
         <p class="text-center italic py-3 ">¡Gracias por comer en el <span class="font-principal text-sm">El Crustáceo Cascarudo !</span> </p>
     </form>
