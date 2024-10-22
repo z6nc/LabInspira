@@ -48,21 +48,21 @@ const ulStyle ="flex  justify-between px-2 items-center";
         </div>
         <div class="flex flex-col py-3 gap-2">
             <div class={ulStyle}>
-                <label for="total" >Atencion de Calamardo :</label>
-               <select class="font-principal text-sm -tracking-tighter pl-3 py-2 border-1 border-black rounded-md" name="" id="">
+                <label for="servicio" >Atencion de Calamardo :</label>
+               <select  class="font-principal text-sm -tracking-tighter px-3 py-2 border-1 border-black rounded-md" name="servicio" id="servicio">
                 <option value="" disabled selected   >Calificacion</option>
-                <option value="buena">¡Espectacular!</option>
-                <option value="mala">Terrible</option>
+                <option value="good">Espectacular</option>
+                <option value="bad">Terrible</option>
                 </select>
             </div>
               
             <div class={ulStyle}>
-                <label for="">Total a pagar S/ :</label>
-                <input class="font-principal text-sm -tracking-tighter pl-3 py-2 border-1 border-black rounded-md"  type="number" name="total" id="total" placeholder="Ingrese un monto" required>
+                <label for="monto">Total a pagar S/ :</label>
+                <input class="font-principal text-sm -tracking-tighter pl-3 py-2 border-1 border-black rounded-md"  type="number" name="monto" id="monto" placeholder="Ingrese un monto" required>
             </div>
             
         </div>
-        <button class="text-center bg-[#ff9900c2] py-2 font-principal rounded-lg hover:scale-105 transition-all duration-100 ease-in " type="submit">Calcular Propina</button>
+        <button id="calcular" class="text-center bg-[#ff9900c2] py-2 font-principal rounded-lg hover:scale-105 transition-all duration-100 ease-in " type="submit">Calcular Propina</button>
 
         <p class="text-center italic py-3 ">¡Gracias por comer en el <span class="font-principal text-sm">El Crustáceo Cascarudo !</span> </p>
     </form>
