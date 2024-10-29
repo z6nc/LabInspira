@@ -1,30 +1,32 @@
 
 	<main class="w-full rounded-b-[100px] h-[60vh] bg-[#244d20] border-[7px] border-[#533610] overflow-x-auto  relative flex justify-center items-center">
-        <div>
-            <p class="text-[#ffffff8f] font-principal text-3xl ">Casino Laboratorio de Ideas</p>
+        <div class="flex flex-col text-center">
+            <p class="text-[#ffda08bb] font-principal text-4xl ">Casino ideas</p>
+            <p class="text-[#ffffffbb] text-2xl  ">BLACKJACK PAGA 3 A 2</p>
+            <div class="bg-[#007d00] p-2">
+                <p class="text-[#ffffffbb]  text-xl ">PAGA 2 A 1 <span class="text-[#ffda08bb] font-bold">SEGURO</span> PAGA 2 A 1</p>
+            </div>
         </div>
+      
      
-     <section class="absolute flex flex-col items-center inset-0">
-        <article class="container-delear bg-red-600">
-            <div class="subcontainer" >
-                <h1>Delear</h1>
-                <div>
-                  <p>Suma de cartas</p>
-                  <h2 class="view-all-card-delear">
-                    <!-- Render card --> 
+     <section class="absolute flex flex-col items-center inset-0 max-w-96 mx-auto ">
+        <article class=" my-5  w-full flex flex-col text-center gap-4">
+            <div class="flex  justify-around" >
+                <h1 class="text-xl font-semibold">Delear</h1>
+                <div class="inline-flex gap-4">
+                  <p class="text-lg">Suma de cartas :</p>
+                  <h2 class="view-all-card-delear text-lg">
+                     0
                   </h2>
                 </div>
             </div>
       
-            <div >
-              <p>Cartas de delear</p>
-              <div style=" display: inline-flex; gap:20px;  ">
-                <h2 class="view-card-delear" >
-                  <!-- Render card --> 
+              <div class="view-card-delear  flex mx-auto gap-7 ">
+                <h2 class="stylecard">
+                  ?
                 </h2>
               </div>
               
-            </div>
            
           
              <div>
@@ -48,14 +50,14 @@
             <h1>Tu</h1>
             <div >
               <p>Cartas de delear</p>
-              <h2 class="view-card-user">
+              <h2 class="view-card-user ">
                 <!-- Render card --> 
               </h2>
             </div>
             <div>
               <p>Suma de cartas</p>
-              <h2 class="view-all-card-user">
-                <!-- Render card --> 
+              <h2 class="view-all-card-user ">
+              
               </h2>
             </div>
           
@@ -72,7 +74,17 @@
   
    </main>
 
-
+   <style>
+    .stylecard {
+  border: 4px solid #fbbf24; /* border-yellow-300 */
+  padding: 1.5rem; /* p-6 */
+  background-color: #ffffff; /* bg-white */
+  color: #000000; /* text-black */
+  font-family: var(--font-principal); /* font-principal (ajusta según tu configuración de fuente) */
+  font-size: 2.25rem; /* text-4xl */
+  border-radius: 0.375rem; /* rounded-md */
+}
+</style>
 
 <script >
 // Variables globales
@@ -150,7 +162,10 @@ function ViewCards(selector, cartas) {
   let card = document.querySelector(selector); 
   card.innerHTML = ""; // Vacía el contenido antes de agregar nuevos elementos
   cartas.forEach((element) => { 
-    card.innerHTML += `<h2 class="card-style">${element}</h2>`;  
+    const h2 = document.createElement("h2");
+    h2.classList.add("stylecard");
+    h2.textContent = element;
+    card.appendChild(h2);
   });
 }
 
@@ -211,7 +226,7 @@ function delearCartas(event){
   const showMessage =  document.querySelector(".message-delear")
 
   const showMessageUser =  document.querySelector(".message-user")
-
+  const containerViewCard = document.querySelector(".container-view-card")
  
 
 
@@ -243,8 +258,7 @@ function delearCartas(event){
 }
 document.addEventListener("DOMContentLoaded", delearCartas);
 
-
-
-
  </script>
+
+
 </html>
