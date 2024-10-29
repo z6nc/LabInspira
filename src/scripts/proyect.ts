@@ -27,7 +27,7 @@ export const Proyectos = [
         secondNombre: 'jack',
         descripcion: 'Juega al blackjack y diviértete con este emocionante juego de cartas.',
         imagen: 'https://tse4.mm.bing.net/th?id=OIG1.KDzG4y3OMGK0H8b03VCG&pid=ImgGn',
-        link: '/',
+        link: '/blackJack',
         svg: '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">'
            + '<path d="M2 2h20v20H2V2zm18 18V4H4v16h16zm-8-5v-1.5h1.5V13H14v-1.5H12.5V10H14V8.5h-4V10h1.5V11H10v1.5h1.5V14H10v1.5h4z"/>'
            + '</svg>',
@@ -44,6 +44,7 @@ export const Proyectos = [
         + '<path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 3h8v2H8v-2zm0 3h5v2H8v-2z"/>'
         + '</svg>',
     },
+
     
     
     
