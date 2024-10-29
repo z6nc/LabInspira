@@ -1,28 +1,24 @@
 
-	<main class="w-full rounded-b-[100px] h-[60vh] bg-[#244d20] border-[7px] border-[#533610] overflow-x-auto  relative flex justify-center items-center">
-        <div class="flex flex-col text-center">
-            <p class="text-[#ffda08bb] font-principal text-4xl ">Casino ideas</p>
-            <p class="text-[#ffffffbb] text-2xl  ">BLACKJACK PAGA 3 A 2</p>
-            <div class="bg-[#007d00] p-2">
-                <p class="text-[#ffffffbb]  text-xl ">PAGA 2 A 1 <span class="text-[#ffda08bb] font-bold">SEGURO</span> PAGA 2 A 1</p>
-            </div>
+	<main class="w-full rounded-b-[100px] h-[65vh] bg-[#244d20] border-[7px] border-[#533610] overflow-x-auto  relative flex justify-center items-center">
+        <div class="flex flex-col text-center ">
+            <p class="text-[#ffda08bb] font-principal text-6xl ">Casino ideas</p>
+            
         </div>
       
      
-     <section class="absolute flex flex-col items-center inset-0 max-w-96 mx-auto ">
-        <article class=" my-5  w-full flex flex-col text-center gap-4">
-            <div class="flex  justify-around" >
-                <h1 class="text-xl font-semibold">Delear</h1>
-                <div class="inline-flex gap-4">
-                  <p class="text-lg">Suma de cartas :</p>
-                  <h2 class="view-all-card-delear text-lg">
-                     0
-                  </h2>
+     <section class="absolute flex flex-col items-center inset-0 max-w-96 lg:max-w-none mx-auto ">
+        <article class=" my-6  flex flex-col text-center gap-4">
+                <h1 class="text-xl font-semibold">Croupier</h1>
+               
+                <div class="text-center border-white border-2 my-3 bg-[#ffffff42] rounded-md">
+                    <h2 class="view-all-card-delear text-lg">
+                        0
+                     </h2>
                 </div>
-            </div>
+                 
       
-              <div class="view-card-delear  flex mx-auto gap-7 ">
-                <h2 class="stylecard">
+              <div class="view-card-delear  flex mx-auto gap-7 stylecard">
+                <h2 class="">
                   ?
                 </h2>
               </div>
@@ -38,26 +34,18 @@
            
           </article>
       
-           <form action="">
-            
-             <button id="start">Pedir Carta </button>
-              <button id="stop">Comparar Cartas </button>
-              <button id="reset">Reset  </button>
+          
       
-           </form>
-      
-          <article class="container-user">
+          <article class="flex flex-col-reverse">
             <h1>Tu</h1>
-            <div >
-              <p>Cartas de delear</p>
-              <h2 class="view-card-user ">
-                <!-- Render card --> 
+            <div class="view-card-user flex mx-auto gap-7 stylecard" >
+              <h2 class=" ">
+                ?
               </h2>
             </div>
-            <div>
-              <p>Suma de cartas</p>
-              <h2 class="view-all-card-user ">
-              
+            <div class="text-center border-white border-2 my-3 bg-[#ffffff42] rounded-md">
+              <h2 class="view-all-card-user  ">
+                0
               </h2>
             </div>
           
@@ -69,196 +57,34 @@
              </div>
            
           </article>
+
+          <form action="" class="flex gap-4 ">
+            
+            <button id="start" class="p-3 bg-[#63fc39] text-black rounded-full font-black transform hover:translate-y-[-3px]" >HIT </button>
+             <button id="stop" class="px-2 py-3 bg-[#ff5842] text-black rounded-full font-black">
+               STAND
+                     </button>
+             <button id="reset" class="px-2 py-3 bg-[#facc34] text-black rounded-full font-black">RESET  </button>
+     
+          </form>
            
      </section>
   
    </main>
 
-   <style>
+
+   <script src="/src/scripts/blackjack.js" ></script>
+
+
+
+<style>
     .stylecard {
   border: 4px solid #fbbf24; /* border-yellow-300 */
   padding: 1.5rem; /* p-6 */
   background-color: #ffffff; /* bg-white */
   color: #000000; /* text-black */
-  font-family: var(--font-principal); /* font-principal (ajusta según tu configuración de fuente) */
+  font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif; /* font-principal (ajusta según tu configuración de fuente) */
   font-size: 2.25rem; /* text-4xl */
   border-radius: 0.375rem; /* rounded-md */
 }
 </style>
-
-<script >
-// Variables globales
-let cartasUser = [];
-let cartasUser2 = [];
-let cartasDelear =[];
-let cartasDelear2 =[];
-
-let sumaCartasdelear = 0; // count card 
-let sumaCartasUser = 0; // count card
-
-//Cartas Principal
-const cartas = {
-  "A": 1,  
-  "2": 2, 
-  "3": 3, 
-  "4": 4, 
-  "5": 5, 
-  "6": 6, 
-  "7": 7, 
-  "8": 8, 
-  "9": 9, 
-  "10": 10, 
-  "J": 10, 
-  "Q": 10, 
-  "K": 10
-};
-
-// verificar si el jugador gana o pierde
-function verificarsuma(sumaCartasDelear, sumaCartasUser) {
-  const showMessageUser = document.querySelector(".message-user");
-  const showMessageDelear = document.querySelector(".message-delear");
-
-  // Limpiar mensajes anteriores
-  showMessageUser.innerHTML = "";
-  showMessageDelear.innerHTML = "";
-
-  // Caso en el que ambos superan 21
-  if (sumaCartasDelear > 21 && sumaCartasUser > 21) {
-    showMessageUser.innerHTML = "Ambos han perdido (Empate)";
-    showMessageDelear.innerHTML = "Ambos han perdido (Empate)";
-  } else if (sumaCartasDelear > 21) {
-    // Si el dealer supera 21, el jugador gana
-    showMessageUser.innerHTML = "Ganaste";
-    showMessageDelear.innerHTML = "Perdiste";
-  } else if (sumaCartasUser > 21) {
-    // Si el jugador supera 21, el dealer gana
-    showMessageUser.innerHTML = "Perdiste";
-    showMessageDelear.innerHTML = "Ganaste";
-  } else if (sumaCartasDelear === 21) {
-    // Si el dealer tiene 21
-    showMessageUser.innerHTML = "Perdiste";
-    showMessageDelear.innerHTML = "Ganaste";
-  } else if (sumaCartasUser === 21) {
-    // Si el jugador tiene 21
-    showMessageUser.innerHTML = "Ganaste";
-    showMessageDelear.innerHTML = "Perdiste";
-  } else if (sumaCartasDelear > sumaCartasUser) {
-    // Si el dealer tiene más que el jugador
-    showMessageUser.innerHTML = "Perdiste";
-    showMessageDelear.innerHTML = "Ganaste";
-  } else if (sumaCartasUser > sumaCartasDelear) {
-    // Si el jugador tiene más que el dealer
-    showMessageUser.innerHTML = "Ganaste";
-    showMessageDelear.innerHTML = "Perdiste";
-  } else if (sumaCartasUser === sumaCartasDelear) {
-    // Si ambos tienen el mismo puntaje
-    showMessageUser.innerHTML = "Empate";
-    showMessageDelear.innerHTML = "Empate";
-  }
-}
-
-// Mostrar cartas 
-function ViewCards(selector, cartas) {
-  let card = document.querySelector(selector); 
-  card.innerHTML = ""; // Vacía el contenido antes de agregar nuevos elementos
-  cartas.forEach((element) => { 
-    const h2 = document.createElement("h2");
-    h2.classList.add("stylecard");
-    h2.textContent = element;
-    card.appendChild(h2);
-  });
-}
-
-
-
-// Cartas aleatorias
-function cartasRandom(){
-  const clavesCartas = Object.keys(cartas); 
-  const indiceAleatorio = Math.floor(Math.random() * clavesCartas.length); 
-  const cartaAleatoria = clavesCartas[indiceAleatorio]; 
-  return {
-    valor: cartas[cartaAleatoria],    // Valor de la carta
-    nombre: cartaAleatoria            // Nombre de la carta (como "A" o "10")
-  }; 
-}
-
-
-function saveCardDelear() {
-  let cartaDeler = cartasRandom(); // Carta aleatoria
-  
-  // Agregar el valor de la carta al total del dealer
-  cartasDelear.push(cartaDeler.valor);
-  sumaCartasdelear += cartaDeler.valor; // Actualizar la suma directamente
-  
-  
-  return {
-    sumaCartasdelear,
-    cartaNombreDelear: cartaDeler.nombre,
-    cardValue: cartasDelear
-  };
-}
-
-function saveCardUser() {
-  const showAddCardUser = document.querySelector(".view-all-card-user");
-  let cartaUser = cartasRandom(); // Carta aleatoria
-  
-  // Agregar el valor de la carta al total del usuario
-  cartasUser.push(cartaUser.valor);
-  sumaCartasUser += cartaUser.valor; // Actualizar la suma directamente
-  
-  showAddCardUser.innerHTML = sumaCartasUser; // Mostrar el total del usuario
-  
-  return {
-    sumaCartasUser,
-    cartaNombre: cartaUser.nombre,
-    cardValue: cartasUser
-  };
-}
-
-// Delear cartas
-function delearCartas(event){
-  event.preventDefault();
-  const boton = document.getElementById("start"); 
-  const btnparar= document.getElementById("stop")
-  const btnreset = document.getElementById("reset");
-  const showAddCard = document.querySelector(".view-all-card-delear");
-
-  const showMessage =  document.querySelector(".message-delear")
-
-  const showMessageUser =  document.querySelector(".message-user")
-  const containerViewCard = document.querySelector(".container-view-card")
- 
-
-
-  boton.addEventListener("click", function(event) {
-    event.preventDefault();
-
-    // Guardamos y mostramos la carta del dealer
-    const { cartaNombreDelear } = saveCardDelear();
-    cartasDelear2.push(cartaNombreDelear);
-
-    // Añadimos un breve retardo antes de mostrar la carta del usuario
-   
-        const { cartaNombre } = saveCardUser();
-        cartasUser2.push(cartaNombre); 
-        ViewCards(".view-card-user", cartasUser2);
-     // 500ms de retraso
-       });
-
-
-    btnparar.addEventListener("click", function(event) {
-    event.preventDefault();
-    ViewCards(".view-card-delear", cartasDelear2);
-  showAddCard.innerHTML = sumaCartasdelear; // Mostrar el total del dealer
-     verificarsuma(sumaCartasdelear , sumaCartasUser)
-  });
-
-
-
-}
-document.addEventListener("DOMContentLoaded", delearCartas);
-
- </script>
-
-
-</html>
