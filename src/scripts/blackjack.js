@@ -35,35 +35,33 @@ const cartas = {
 
 // verificar si el jugador gana o pierde
 function verificarsuma(sumaCartasDelear, sumaCartasUser) {
-  const showMessageUser = document.querySelector(".message-user");
 
   // Limpiar mensajes anteriores
-  showMessageUser.innerHTML = "";
 
   // Caso en el que ambos superan 21
   if (sumaCartasDelear > 21 && sumaCartasUser > 21) {
-    showMessageUser.innerHTML = "Ambos han perdido (Empate)";
+    alert("Ambos han perdido (Empate)");
   } else if (sumaCartasDelear > 21) {
     // Si el dealer supera 21, el jugador gana
-    showMessageUser.innerHTML = "Ganaste";
-  } else if (sumaCartasUser > 21) {
+    alert("Ganaste");
+  } else if (sumaCartasUser > 21 ) {
     // Si el jugador supera 21, el dealer gana
-    showMessageUser.innerHTML = "Perdiste";
+    alert("Perdiste");
   } else if (sumaCartasDelear === 21) {
     // Si el dealer tiene 21
-    showMessageUser.innerHTML = "Perdiste";
+    alert("Perdiste");
   } else if (sumaCartasUser === 21) {
     // Si el jugador tiene 21
-    showMessageUser.innerHTML = "Ganaste";
+    alert("Blackjack! Ganaste");
   } else if (sumaCartasDelear > sumaCartasUser) {
     // Si el dealer tiene más que el jugador
-    showMessageUser.innerHTML = "Perdiste";
+    alert("Perdiste");
   } else if (sumaCartasUser > sumaCartasDelear) {
     // Si el jugador tiene más que el dealer
-    showMessageUser.innerHTML = "Ganaste";
+    alert("Ganaste");
   } else if (sumaCartasUser === sumaCartasDelear) {
     // Si ambos tienen el mismo puntaje
-    showMessageUser.innerHTML = "Empate";
+    alert("Empate");
   }
 }
 
@@ -118,11 +116,12 @@ function saveCardUser() {
   // Agregar el valor de la carta al total del usuario
   cartasUser.push(cartaUser.valor);
   sumaCartasUser += cartaUser.valor; // Actualizar la suma directamente
+  
   if (sumaCartasUser > 21) {
-    showMessageUser.innerHTML = "Perdiste";
     setTimeout(() => {
+    alert("Perdiste");
     resetGame();
-    }, 900); 
+    }, 200);
   }
   
   showAddCardUser.innerHTML = sumaCartasUser; // Mostrar el total del usuario
@@ -165,10 +164,11 @@ function delearCartas(event){
         event.preventDefault();
         ViewCards(".view-card-delear", cartasDelear2);
         showAddCard.innerHTML = sumaCartasdelear; // Mostrar el total del dealer
-        verificarsuma(sumaCartasdelear , sumaCartasUser)
+        
         setTimeout(() => {
+          verificarsuma(sumaCartasdelear , sumaCartasUser)
           resetGame();
-          }, 2000); 
+          }, 300); 
         
       } else {
         alert("Debes iniciar el juego primero");
