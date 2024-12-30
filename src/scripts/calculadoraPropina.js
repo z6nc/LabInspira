@@ -36,7 +36,7 @@ function propina (event){
   let Monto = parseFloat(document.getElementById("monto").value);
   let Servicio = document.getElementById("servicio").value;
   let Propina = calcularPropina(Monto, Servicio);
-  if (  Servicio === "") {
+  if (Servicio === "") {
     alert("Te falta llenar un campo");
     return;
   }
@@ -59,25 +59,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
 
-//Juego para adivinar la propina que dejara el usuario
 
-// function PropinaMesero (propinaUser){
-//     let PrecioTotal = Math.round(Math.random() * (1000 - 40 + 1) + 40);
-//     let  MaxPropina = MaximaPropina(PrecioTotal);
-     
-//      let respuesta ="";
-//       if(propinaUser >= MaxPropina){
-        
-//         respuesta = "No eres un tacaño precio total es "+PrecioTotal + " dejaste una buena propina o incluso mas de lo que debias lo recomendable es aprox "+ MaxPropina+ " tu dejaste "+ propinaUser 
-//         return respuesta
-         
-//       } else{
-//         respuesta = "Valora a tu meserp lo que debiste dar es " + MaxPropina + " y tu dejaste " + propinaUser
-
-//          return respuesta
-//       }
-      
-// }
 
 
 

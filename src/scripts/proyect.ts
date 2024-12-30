@@ -45,6 +45,22 @@ export const Proyectos = [
         + '</svg>',
     },
 
+
+    {
+        id: 5,
+        nombre: 'Math',
+        secondNombre: 'Master',
+        descripcion: 'Un divertido mini-juego diseñado para poner a prueba tus habilidades en multiplicación.',
+        imagen: 'https://tse2.mm.bing.net/th?id=OIG3.yAgN0gD6ciTPuBziLuvH&pid=ImgGn',
+        link: '/GameMath',
+        svg: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">'
+            + '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>'
+            + '</svg>',
+    }
+    
+    
+    
+
     
     
     
