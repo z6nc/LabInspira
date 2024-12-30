@@ -4,6 +4,8 @@ let Number2 =  document.querySelector('.number2')
 let Buttons = document.querySelectorAll('.result-btn');
 let Resultado = document.querySelector('#result')
 let ResultadoText = document.querySelector('#result-text')
+let ResultadoScore = document.querySelector('.score')
+let ButtoMessage = document.querySelector('#btn-next')
 let score = 0;
 
 function RandomNumber() {
@@ -24,12 +26,10 @@ function MultiNumber(){
     return number1 * number2
 }
 
-function MostrarResultado(TextResult) {
+function MostrarResultado(TextResult , Message) {
     ResultadoText.innerHTML = TextResult;
+    ButtoMessage.innerHTML = Message;
     Resultado.style.display = 'flex';
-    document.getElementById('btn-next').addEventListener('click', function() {
-        Resultado.style.display = 'none';
-    });
 
 }
 
@@ -42,25 +42,42 @@ function AsignarResultado(Resultado) {
     // Asignar valores a los botones
     Buttons.forEach((button, index) => {
         if (index === randomIndex) {
-            button.innerHTML = Resultado; // El botón correcto muestra el resultado
+            button.innerHTML = Resultado; 
         } else {
-            button.innerHTML = errores.pop(); // Los otros botones muestran errores únicos
+            button.innerHTML = errores.pop(); 
         }
     });
 }
 
+function Reset() {
+    location.reload();
+}
+
+function CountScore(MessageResult) {
+    if (MessageResult === 'Correcto') {
+        score += 1;
+        ResultadoScore.innerHTML = score;
+    } else {
+        score = 0;
+        ResultadoScore.innerHTML = score;
+    }
+    
+}
 
 function CompareResult(event) {
-    let Resultado = MultiNumber()
-    let button = event.target
-    let respuesta = parseInt(button.innerHTML)
-    if (respuesta === Resultado) {
-        MostrarResultado('Correcto')
+    const resultado = MultiNumber();
+    const respuesta = parseInt(event.target.innerHTML);
+    const correcto = respuesta === resultado;
 
-    } else {
-        MostrarResultado('Incorrecto')
-    }
+    CountScore(correcto ? 'Correcto' : 'Incorrecto');
+    MostrarResultado(correcto ? 'Correcto' : 'Incorrecto', correcto ? 'Siguiente' : 'Reintentar');
+
+    const nextAction = correcto ? GameStart : Reset;
+    document.getElementById('btn-next').addEventListener('click', nextAction);
 }
+
+
+
 
 function GameStart(event) {
     event.preventDefault();
@@ -68,18 +85,22 @@ function GameStart(event) {
     let Resultado = MultiNumber()
     AsignarResultado(Resultado)
     Buttons.forEach(button => {
-        button.removeEventListener('click', CompareResult); // Evitar eventos duplicados
+        button.removeEventListener('click', CompareResult); 
         button.addEventListener('click', CompareResult);
     });
 }
 
 
 
-
 document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('Play').addEventListener('click', GameStart);
-  });
+    const playButton = document.getElementById('Play');
+    const resetButton = document.getElementById('Reset');
+    const nextButton = document.getElementById('btn-next');
 
-  document.addEventListener('DOMContentLoaded', function() {
-    document.getElementById('btn-next').addEventListener('click', GameStart);
-  });
+    playButton.addEventListener('click', GameStart);
+    resetButton.addEventListener('click', Reset);
+    nextButton.addEventListener('click', function() {
+        Resultado.style.display = 'none';
+    });
+});
+
