@@ -22,6 +22,9 @@ export default {
 			'1': '1px',
 			'3': '3px',
 		   },
+		    boxShadow: {
+			'boxBottom': '4px 4px 1px 1px #6aff62',
+			}
 		
 	},
 	plugins: [],
