@@ -1,55 +1,60 @@
-# Astro Starter Kit: Basics
-
-```sh
-npm create astro@latest -- --template basics
-```
-
-[![Open in StackBlitz](https://developer.stackblitz.com/img/open_in_stackblitz.svg)](https://stackblitz.com/github/withastro/astro/tree/latest/examples/basics)
-[![Open with CodeSandbox](https://assets.codesandbox.io/github/button-edit-lime.svg)](https://codesandbox.io/p/sandbox/github/withastro/astro/tree/latest/examples/basics)
-[![Open in GitHub Codespaces](https://github.com/codespaces/badge.svg)](https://codespaces.new/withastro/astro?devcontainer_path=.devcontainer/basics/devcontainer.json)
-
-> 🧑‍🚀 **Seasoned astronaut?** Delete this file. Have fun!
-
-![just-the-basics](https://github.com/withastro/astro/assets/2244813/a0a5533c-a856-4198-8470-2d67b1d7c554)
-
-## 🚀 Project Structure
-
-Inside of your Astro project, you'll see the following folders and files:
-
-```text
-/
-├── public/
-│   └── favicon.svg
-├── src/
-│   ├── components/
-│   │   └── Card.astro
-│   ├── layouts/
-│   │   └── Layout.astro
-│   └── pages/
-│       └── index.astro
-└── package.json
-```
-
-Astro looks for `.astro` or `.md` files in the `src/pages/` directory. Each page is exposed as a route based on its file name.
-
-There's nothing special about `src/components/`, but that's where we like to put any Astro/React/Vue/Svelte/Preact components.
-
-Any static assets, like images, can be placed in the `public/` directory.
-
-## 🧞 Commands
-
-All commands are run from the root of the project, from a terminal:
-
-| Command                   | Action                                           |
-| :------------------------ | :----------------------------------------------- |
-| `npm install`             | Installs dependencies                            |
-| `npm run dev`             | Starts local dev server at `localhost:4321`      |
-| `npm run build`           | Build your production site to `./dist/`          |
-| `npm run preview`         | Preview your build locally, before deploying     |
-| `npm run astro ...`       | Run CLI commands like `astro add`, `astro check` |
-| `npm run astro -- --help` | Get help using the Astro CLI                     |
-
-## 👀 Want to learn more?
-
-Feel free to check [our documentation](https://docs.astro.build) or jump into our [Discord server](https://astro.build/chat).
 # LabInspira
+
+LabInspira es una plataforma de mini proyectos de juegos creada con **Astro** y estilizada con **Tailwind CSS**. Su objetivo es proporcionar un espacio interactivo donde los usuarios puedan explorar y experimentar con diferentes juegos pequeños y educativos.
+
+## Tecnologías Utilizadas
+
+- **Astro**: Para la generación de la interfaz y la organización del contenido.
+- **Tailwind CSS**: Para el diseño y la estilización rápida y eficiente.
+- **JavaScript**: Para la lógica interactiva de los juegos.
+
+## Características Principales
+
+- Plataforma ligera y rápida gracias a Astro.
+- Diseño responsivo y atractivo con Tailwind CSS.
+- Variedad de mini juegos interactivos.
+
+## Instalación y Ejecución
+
+1. Clona el repositorio:
+   ```sh
+   git clone https://github.com/z6nc/LabInspira.git
+   ```
+2. Accede al directorio del proyecto:
+   ```sh
+   cd LabInspira
+   ```
+3. Instala las dependencias:
+   ```sh
+   npm install
+   ```
+4. Inicia el servidor de desarrollo:
+   ```sh
+   npm run dev
+   ```
+5. Abre tu navegador y accede a `http://localhost:3000/` (o el puerto indicado por Astro).
+
+## Contribución
+
+Si deseas contribuir con nuevas ideas o mejoras, síguenos estos pasos:
+
+1. Realiza un **fork** del repositorio.
+2. Crea una rama con tu nueva función o corrección de errores:
+   ```sh
+   git checkout -b feature/nueva-funcionalidad
+   ```
+3. Realiza los cambios y sube tu trabajo:
+   ```sh
+   git commit -m "Agregada nueva funcionalidad"
+   git push origin feature/nueva-funcionalidad
+   ```
+4. Abre un **Pull Request** y explícanos tus cambios.
+
+## Licencia
+
+Este proyecto está bajo la licencia MIT. Puedes usarlo, modificarlo y compartirlo libremente.
+
+---
+
+¡Disfruta explorando y aprendiendo con **LabInspira**! 🚀
+
