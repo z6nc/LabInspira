@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import TicTacGames from '../components/TicTacJuego/TicTacGame.astro';
+import Page404 from '../components/404Pages/Pages404.astro';
+import ContenedorMain from '../utils/ContenedorMain.astro';
 ---
 
 <Layout title="TicTacGame">
   
-	<main class="mt-14 flex  flex-col gap-5 mx-3 ">
-      <TicTacGames />
-         
-    </main>
+	<ContenedorMain >
+      <!-- <TicTacGames /> -->
+          <Page404/>
+    </ContenedorMain>
 </Layout>
 
 

@@ -1,42 +1,12 @@
 ---
 import { Proyectos } from "../../scripts/proyect";
-import InterroganteIcon from "../../utils/InterroganteIcon.astro";
+import FuturoCard from "../404Pages/FuturoCard.astro";
 ---
 
 <section
   class="grid grid-cols-1 lg:grid-cols-3 gap-9 lg:gap-12 mt-4 mx-3 lg:mx-0"
 >
-  <div
-    class="Contenedor-proyectos flex flex-col gap-4 rounded-md items-center justify-between filter grayscale-[40%] hover:grayscale-0 transition duration-300"
-  >
-    <div class="flex flex-col gap-3 items-center">
-      <div class="overflow-hidden h-48 lg:h-52 w-full rounded-xl">
-        <img
-          class="rounded-lg w-full object-cover object-center h-full transition-all duration-200 hover:scale-110"
-          loading="lazy"
-          src="https://res.cloudinary.com/dleem7osr/image/upload/v1741112298/ProximosJuegos_wfizmv.webp"
-          alt="Imagen de un videojuego de proximos proyectos"
-        />
-      </div>
-      <div class="flex flex-col gap-3 justify-center items-center text-center">
-        <div class="flex gap-2 text-center">
-          <h4 class="text-2xl lg:text-3xl font-principal">Próximo</h4>
-          <InterroganteIcon />
-          <h4 class="text-2xl lg:text-3xl font-principal">Proyecto</h4>
-        </div>
-
-        <p class="text-gray-100">Próximamente.. :)</p>
-      </div>
-    </div>
-    <div class="inline-flex gap-2">
-      <p class="bg-[#fc2d2d] px-12 py-2 rounded-md font-principal">NO</p>
-      <p
-        class="border-[1px] border-[#fc2d2d] bg-[#fc2d2d65] px-12 py-2 rounded-md font-principal tracking-wide"
-      >
-        DISPONIBLE
-      </p>
-    </div>
-  </div>
+  <FuturoCard />
 
   {
     Proyectos.slice()
