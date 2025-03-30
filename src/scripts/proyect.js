@@ -1,6 +1,7 @@
 export const Proyectos = [
     {
         id: 1,
+        nombreProyecto :"TermoConvertidor",
         nombre: 'Termo',
         secondNombre: 'Convert',
         descripcion: 'Convierte temperaturas entre Celsius y Fahrenheit de forma rápida y sencilla.',
@@ -12,6 +13,7 @@ export const Proyectos = [
     },
     {
         id: 2,
+        nombreProyecto :"TestimonioCard",
         nombre: 'Testimonio ',
         secondNombre: 'Express',
         descripcion: 'Escribe un comentario y genera tarjetas de testimonios personalizadas .',
@@ -23,6 +25,7 @@ export const Proyectos = [
     },
     {
         id: 3,
+        nombreProyecto :"BlackJack",
         nombre: 'Black',
         secondNombre: 'jack',
         descripcion: 'Juega al blackjack y diviértete con este emocionante juego de cartas.',
@@ -35,6 +38,7 @@ export const Proyectos = [
    
     {
         id: 4,
+        nombreProyecto :"calculadora Propina",
         nombre: 'Calcu',
         secondNombre: 'Propina',
         descripcion: 'Calcula la propina que debes dejar al mesero en un restaurante.',
@@ -44,10 +48,9 @@ export const Proyectos = [
         + '<path d="M3 3h18v18H3V3zm2 2v14h14V5H5zm3 3h8v2H8V8zm0 3h8v2H8v-2zm0 3h5v2H8v-2z"/>'
         + '</svg>',
     },
-
-
     {
         id: 5,
+        nombreProyecto :"Math Master",
         nombre: 'Math',
         secondNombre: 'Master',
         descripcion: 'Un divertido mini-juego diseñado para poner a prueba tus habilidades en multiplicación.',
@@ -56,6 +59,18 @@ export const Proyectos = [
         svg: '<svg xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" class="size-6">'
             + '<path stroke-linecap="round" stroke-linejoin="round" d="M6 18L18 6M6 6l12 12"/>'
             + '</svg>',
+    },
+    {
+        id : 6,
+        nombreProyecto :"TicTac",
+        nombre : 'Tic',
+        secondNombre : 'Tac',
+        descripcion : 'Juega al clásico juego de tres en raya con tu amigo  o compañero.',
+        imagen : 'https://res.cloudinary.com/dleem7osr/image/upload/v1741220439/TickTack_b6ofbf.webp',
+        link : '/TicTac',
+        svg : '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">'
+        + '<path d="M6 6h5v5H6V6zm0 7h5v5H6v-5zm0 7h5v5H6v-5zm7-14h5v5h-5V6zm0 7h5v5h-5v-5zm0 7h5v5h-5v-5zm7-14h5v5h-5V6zm0 7h5v5h-5v-5zm0 7h5v5h-5v-5z"/>'
+        + '</svg>',
     }
     
     

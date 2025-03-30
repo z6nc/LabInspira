@@ -1,14 +1,16 @@
 ---
-import Layout from '../layouts/Layout.astro';
-import MathGame from '../components/MiniJuegoMath/MathGame.astro';
+import Layout from "../layouts/Layout.astro";
+import MathGame from "../components/MiniJuegoMath/MathGame.astro";
+import ContenedorMain from "../utils/ContenedorMain.astro";
+import Titulos from "../utils/Titulos.astro";
 ---
 
 <Layout title="Welcome to Astro.">
-  
-	<main class="mt-14 flex  flex-col gap-5 mx-3 ">
-   
-        <MathGame />
-    </main>
+  <ContenedorMain>
+    <div class="flex   items-center justify-between py-4">
+        <Titulos titulo="Math X Master" />
+         <p class="inline-flex text-xl font-black gap-2" >Score :<span  class="score text-xl">0</span></p>
+    </div>
+    <MathGame />
+  </ContenedorMain>
 </Layout>
-
-

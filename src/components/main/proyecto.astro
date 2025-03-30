@@ -3,7 +3,6 @@ import { Proyectos } from "../../scripts/proyect";
 import InterroganteIcon from "../../utils/InterroganteIcon.astro";
 ---
 
-<!-- Hacer el map de array de objestos de los proyectos  -->
 <section
   class="grid grid-cols-1 lg:grid-cols-3 gap-9 lg:gap-12 mt-4 mx-3 lg:mx-0"
 >
@@ -50,7 +49,7 @@ import InterroganteIcon from "../../utils/InterroganteIcon.astro";
                 class="rounded-lg w-full object-cover object-center h-full transition-all duration-200 hover:scale-110"
                 loading="lazy"
                 src={proyecto.imagen}
-                alt=""
+                alt={`imagen referente a ${proyecto.nombreProyecto}`}
               />
             </div>
             <div class="flex  flex-col gap-3 justify-center items-center text-center">

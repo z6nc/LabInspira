@@ -1,41 +1,41 @@
-<article class="container-card2  p-6 max-w-xl  flex  flex-col gap-4">
-    <div class="container-commet bg-black p-6  text-wrap  border-[1px] border-white   rounded-xl  transition-all duration-200 ease-in-out">
-        <p class="bg-black p-2 rounded-xl overflow-hidden   comments ">
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda error maiores vitae fugit, unde beatae a autem. Vitae voluptates sunt libero velit veniam quia quis itaque quidem voluptatum. Blanditiis, laborum!
-              
-        </p>
+<article class="container-card2 group p-6 max-w-xl flex flex-col gap-4">
+  <div
+    class="container-commet group-hover:-translate-y-3 bg-black p-6 text-wrap border-[1px] border-white rounded-xl transition-all duration-200 ease-in-out"
+  >
+    <p class="bg-black p-2 rounded-xl overflow-hidden comments">
+      Lorem ipsum dolor sit amet consectetur adipisicing elit. Assumenda error
+      maiores vitae fugit, unde beatae a autem. Vitae voluptates sunt libero
+      velit veniam quia quis itaque quidem voluptatum. Blanditiis, laborum!
+    </p>
+  </div>
+  <div class="container-info-user flex gap-4">
+    <div
+      class="container-photo-user flex overflow-hidden w-20 h-20 rounded-full"
+    >
+      <img
+        class="imageUser w-full h-full object-cover"
+        src="https://res.cloudinary.com/dleem7osr/image/upload/v1743362718/PortadaWebBedidas_mkcaim.webp"
+        alt="imagen de tu personaje "
+      />
     </div>
-    <div class="container-info-user flex gap-4">
-        <div class="container-photo-user flex overflow-hidden  w-20 h-20 rounded-full">
-          <img  class="imageUser  w-full h-full" src="https://tse4.mm.bing.net/th?id=OIG1.iLHZuRtxTqDjnyS2J2F.&pid=ImgGn" alt="">
-        </div>
-        <div class="container-name-user flex flex-col justify-center  ">
-          <h4 class="nameUser text-lg font-bold">Cristiano Ronaldo</h4>
-          <p  class="jobuser">Developer web</p>
-        </div>
-      </div>
+    <div class="container-name-user flex flex-col justify-center">
+      <h4 class="nameUser text-lg font-bold">Tu Usuario</h4>
+      <p class="jobuser">Su trabajo</p>
+    </div>
+  </div>
 </article>
 
 <style>
-    .container-commet{
-      position: relative;
-
-    }
-    .container-commet::after {
-  content: "";
-  position: absolute;
-  bottom: -20px; /* Ajusta la posición de la cola */
-  left: 27px; /* Ajusta la posición horizontal de la cola */
-  border-width: 10px;
-  border-style: solid;
-  border-color: #ffffff transparent transparent transparent; /* El color de la burbuja */
-}
-    
-
-    @media screen and (min-width: 740px) {
-    .container-card2:hover  .container-commet{
-        transform: translateY(-9px);
-    }
-
-}
+  .container-commet {
+    position: relative;
+  }
+  .container-commet::after {
+    content: "";
+    position: absolute;
+    bottom: -20px; 
+    left: 27px; 
+    border-width: 10px;
+    border-style: solid;
+    border-color: #ffffff transparent transparent transparent; 
+  }
 </style>

@@ -2,25 +2,25 @@
 const Styleglobal = "text-black text-center py-3 rounded-md font-semibold text-lg"
 ---
 
-<form id="form-convertidor" class="flex flex-col gap-5 lg:flex-row ">
-    <input  class={Styleglobal} type="number" class="numero" id="numero" placeholder="Ingrese la temperatura = 0.0" required>
+<form id="form-convertidor" class="grid grid-cols-4 grid-rows-2 gap-3 ">
+    <input  class={`${Styleglobal} col-span-2 `} type="number"  id="numero" placeholder="Ingrese la temperatura = 0.0" required>
   
-    <select class={Styleglobal} id="FromUnit" name="fromUnit" required>
+    <select class={`${Styleglobal} col-span-1 `} id="FromUnit"   name="fromUnit" required>
       <option value="" disabled selected>From Unit</option>
       <option value="fahrenheit">Fahrenheit ☀️</option>
       <option value="celsius">Celsius ❄️</option>
     </select>
   
-    <select id="ToUnit" class={Styleglobal} name="toUnit" required>
+    <select id="ToUnit" class={`${Styleglobal} col-span-1 `} name="toUnit" required>
       <option value="" disabled selected>To Unit</option>
       <option value="fahrenheit">Fahrenheit ☀️</option>
       <option value="celsius">Celsius ❄️ </option>
     </select>
   
-    <button type="submit" class="bg-[#0aa40298]   hover:bg-[#0aa402] p-2  lg:py-3 text-lg -tracking-tighter rounded-md font-principal border-[1px] border-white">CONVERTIR</button>
+    <button type="submit" class="bg-[#0aa40298]  hover:bg-[#0aa402] p-2  lg:py-3 text-lg col-span-4 -tracking-tighter rounded-md font-principal border-[1px] border-white">CONVERTIR</button>
   </form>
   
-  <div class="contenedor-Respuesta  text-center   mt-3 border-[1px] p-2 border-white h-36 rounded-md ">
+  <div class="contenedor-Respuesta  text-center   mt-3 border-[1px] p-2 border-white h-36 rounded-md  bg-black/30">
     <h3 class="text-start font-principal -tracking-tighter text-lg mb-4">Resultado :</h3>
     <span  class="numeroConvertido  text-lg lg:text-xl"></span>
   </div>
@@ -28,31 +28,4 @@ const Styleglobal = "text-black text-center py-3 rounded-md font-semibold text-l
   <script src="/src/scripts/temperatureConverter.js"></script>
   
 
-  <style>
-    .contenedor-Respuesta{
-      background-color: rgba(0, 0, 0, 0.5);
-    }
-    @media screen and (min-width: 740px) {
-      #form-convertidor {
-    display: grid; /* Importante: activar el grid */
-    grid-template-areas: 
-      "input input from to"
-      "boton boton boton boton";
-    gap: 10px; /* Espacio entre elementos */
-  }
-  #numero {
-    grid-area: input;
-  }
-  #FromUnit {
-    grid-area: from;
-  }
-  #ToUnit {
-    grid-area: to;
-  }
-  button {
-    grid-area: boton;
-  }
-}
-
-
-  </style>
+  

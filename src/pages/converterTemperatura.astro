@@ -1,14 +1,16 @@
 ---
 import Layout from '../layouts/Layout.astro';
 import Convertidor from '../components/Convertidor.astro';
+import ContenedorMain from '../utils/ContenedorMain.astro';
+import Titulos from '../utils/Titulos.astro';
 ---
 
 <Layout title="Welcome to Astro.">
   
-	<main class="mt-14 flex  flex-col gap-5 mx-3">
-     <h1 class=" font-principal text-center   lg:text-start text-4xl uppercase">TermoConvert 🌡️</h1>
-	<Convertidor />
-    </main>
+	<ContenedorMain>
+     <Titulos titulo="TermoConvert 🌡️"/>
+	    <Convertidor />
+    </ContenedorMain>
 </Layout>
 
 
