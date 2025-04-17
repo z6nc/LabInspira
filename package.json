@@ -12,6 +12,7 @@
   "dependencies": {
     "@astrojs/tailwind": "^5.1.1",
     "astro": "^4.16.18",
+    "canvas-confetti": "^1.9.3",
     "tailwindcss": "^3.4.13"
   }
 }

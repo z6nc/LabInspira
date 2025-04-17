@@ -62,12 +62,12 @@ export const Proyectos = [
     },
     {
         id : 6,
-        nombreProyecto :"TicTac",
-        nombre : 'Tic',
-        secondNombre : 'Tac',
-        descripcion : 'Juega al clásico juego de tres en raya con tu amigo  o compañero.',
+        nombreProyecto :"Triada Dinamica ",
+        nombre : 'Triada',
+        secondNombre : 'Dinámica',
+        descripcion : 'Juega al clásico juego piedra , papel y tijera  , el juego esta disponible para dos jugadores ',
         imagen : 'https://res.cloudinary.com/dleem7osr/image/upload/v1741220439/TickTack_b6ofbf.webp',
-        link : '/TicTac',
+        link : '/Triada',
         svg : '<svg xmlns="http://www.w3.org/2000/svg" width="32" height="32" fill="currentColor" viewBox="0 0 24 24">'
         + '<path d="M6 6h5v5H6V6zm0 7h5v5H6v-5zm0 7h5v5H6v-5zm7-14h5v5h-5V6zm0 7h5v5h-5v-5zm0 7h5v5h-5v-5zm7-14h5v5h-5V6zm0 7h5v5h-5v-5zm0 7h5v5h-5v-5z"/>'
         + '</svg>',
