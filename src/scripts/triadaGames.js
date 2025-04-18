@@ -16,9 +16,9 @@ const reglas = {
   };
   
   const itemImg = {
-    piedra: '/src/asset/piedra.webp',
-    tijera: '/src/asset/tijera.webp',
-    papel: '/src/asset/papel.webp'
+    piedra: 'https://res.cloudinary.com/dleem7osr/image/upload/v1744934859/piedra_ql6pgf.webp',
+    tijera: 'https://res.cloudinary.com/dleem7osr/image/upload/v1744934861/tijera_mojvvc.webp',
+    papel: 'https://res.cloudinary.com/dleem7osr/image/upload/v1744934861/papel_lssd3d.webp'
   }
 
   function asignarImg(UserItem1 , UserItem2){
